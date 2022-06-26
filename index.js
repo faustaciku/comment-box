@@ -13,3 +13,10 @@ function displayComment(event) {
   commentBox.innerHTML =
     nameInput.value + emailInput.value + commentInput.value;
 }
+
+function countCharacters() {
+  let commentInput = document.querySelector("#comment");
+  let characterLength = commentInput.value.length;
+  let characters = document.querySelector("#characters");
+  characters.innerHTML = `${characterLength}/140`;
+}
