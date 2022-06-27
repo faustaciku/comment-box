@@ -8,9 +8,6 @@ function displayComment(event) {
   let nameInput = document.querySelector("#name");
   let emailInput = document.querySelector("#email");
   let commentInput = document.querySelector("#comment");
-  console.log(commentInput.value);
-  console.log(nameInput.value);
-  console.log(emailInput.value);
   comments.push({
     name: nameInput.value,
     email: emailInput.value,
