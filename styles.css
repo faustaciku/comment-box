@@ -57,3 +57,9 @@ p {
   display: block;
   text-align: center;
 }
+#paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
