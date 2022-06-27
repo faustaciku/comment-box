@@ -9,8 +9,9 @@ function displayComment(event) {
   console.log(commentInput.value);
   console.log(nameInput.value);
   console.log(emailInput.value);
-  let commentBox = document.querySelector("p");
+  let commentBox = document.querySelector("#paragraph");
   commentBox.innerHTML = `<div style="font-size:20px">${nameInput.value} <br /> ${emailInput.value} <br /> ${commentInput.value} </div>`;
+  form.reset();
 }
 
 function countCharacters() {

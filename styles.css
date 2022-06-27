@@ -55,4 +55,5 @@ textarea:focus {
 }
 p {
   display: block;
+  text-align: center;
 }
