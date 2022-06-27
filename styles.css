@@ -68,6 +68,34 @@ p {
   align-items: center;
 }
 .link {
-  margin: 140px;
+  margin-top: 140px;
   text-align: center;
+}
+@media (max-width: 640px) {
+  h1 {
+    font-size: 20px;
+  }
+  h2 {
+    font-size: 18px;
+  }
+  input,
+  #comment,
+  #warning,
+  #characters {
+    font-size: 12px;
+  }
+  .comment-space {
+    width: 85%;
+  }
+  #name,
+  #email,
+  #comment {
+    width: 70%;
+  }
+  .link {
+    font-size: 9px;
+  }
+  span {
+    font-size: 12px !important;
+  }
 }

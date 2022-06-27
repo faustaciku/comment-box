@@ -26,7 +26,7 @@ function renderComments() {
   let commentBox = document.querySelector("#paragraph");
   let temp = "";
   comments.forEach((comment) => {
-    temp += `<div style="font-size:20px; background:#C8C8DF; text-align: left; padding:15px; border-radius: 10px; width: 40%; margin:5px; border: 1px solid grey;"> ${year}/${month}/${day} <br />Name: ${comment.name} <br />Email: ${comment.email} <br /> Comment: ${comment.comment} </div>`;
+    temp += `<span style="font-size:20px; background:#C8C8DF; text-align: left; padding:15px; border-radius: 10px; width: 40%; margin:5px; border: 1px solid grey;"> ${year}/${month}/${day} <br />Name: ${comment.name} <br />Email: ${comment.email} <br /> Comment: ${comment.comment} </span>`;
   });
   commentBox.innerHTML = temp;
 }
