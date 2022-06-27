@@ -19,10 +19,14 @@ function displayComment(event) {
 }
 
 function renderComments() {
+  let now = new Date();
+  let year = now.getFullYear();
+  let month = now.getMonth();
+  let day = now.getDay();
   let commentBox = document.querySelector("#paragraph");
   let temp = "";
   comments.forEach((comment) => {
-    temp += `<div style="font-size:20px; background:#C8C8DF; text-align: left; padding:15px; border-radius: 10px; width: 40%; margin:5px; border: 1px solid grey;">Name: ${comment.name} <br />Email: ${comment.email} <br /> Comment: ${comment.comment} </div>`;
+    temp += `<div style="font-size:20px; background:#C8C8DF; text-align: left; padding:15px; border-radius: 10px; width: 40%; margin:5px; border: 1px solid grey;"> ${year}/${month}/${day} <br />Name: ${comment.name} <br />Email: ${comment.email} <br /> Comment: ${comment.comment} </div>`;
   });
   commentBox.innerHTML = temp;
 }
