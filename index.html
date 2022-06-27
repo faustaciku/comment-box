@@ -10,20 +10,35 @@
   <body>
     <div class="comment-space">
       <h1>Leave a comment</h1>
+      <p id="warning"></p>
       <form id="comment-form">
-        <input type="text" placeholder="Enter your name..." id="name" />
-        <input type="email" placeholder="Enter your email..." id="email" />
+        <input
+          type="text"
+          placeholder="Enter your name..."
+          id="name"
+          class="required"
+          onkeyup="enableSubmit()"
+        />
+        <input
+          type="email"
+          placeholder="Enter your email..."
+          id="email"
+          class="required"
+          onkeyup="enableSubmit()"
+        />
         <textarea
           name="comment"
           id="comment"
           cols="30"
           rows="10"
           placeholder="Enter a comment..."
-          onkeyup="countCharacters()"
+          onkeydown="countCharacters()"
+          class="required"
+          onkeyup="enableSubmit()"
         ></textarea>
 
         <div id="characters">0/140</div>
-        <input type="submit" value="Post Comment" id="submit" />
+        <input type="submit" value="Post Comment" id="submit" disabled />
       </form>
     </div>
     <p></p>

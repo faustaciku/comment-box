@@ -10,8 +10,7 @@ function displayComment(event) {
   console.log(nameInput.value);
   console.log(emailInput.value);
   let commentBox = document.querySelector("p");
-  commentBox.innerHTML =
-    nameInput.value + emailInput.value + commentInput.value;
+  commentBox.innerHTML = `<div style="font-size:20px">${nameInput.value} <br /> ${emailInput.value} <br /> ${commentInput.value} </div>`;
 }
 
 function countCharacters() {
@@ -26,4 +25,21 @@ function countCharacters() {
     characters.innerHTML = `${characterLength}/140`;
     commentInput.style.border = "1px solid grey";
   }
+}
+function enableSubmit() {
+  let inputs = document.getElementsByClassName("required");
+  let btn = document.querySelector('input[type="submit"]');
+  let isValid = true;
+
+  for (var i = 0; i < inputs.length; i++) {
+    let changedInput = inputs[i];
+    if (changedInput.value.trim() === "" || changedInput.value === null) {
+      isValid = false;
+
+      break;
+    }
+  }
+  let warning = document.querySelector("#warning");
+  warning.innerHTML = "Please enter all the fields";
+  btn.disabled = !isValid;
 }

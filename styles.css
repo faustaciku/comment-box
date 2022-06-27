@@ -53,3 +53,6 @@ textarea:focus {
   text-align: center;
   margin-top: 10px;
 }
+p {
+  display: block;
+}
