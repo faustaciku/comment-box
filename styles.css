@@ -67,3 +67,7 @@ p {
   justify-content: center;
   align-items: center;
 }
+.link {
+  margin: 140px;
+  text-align: center;
+}
