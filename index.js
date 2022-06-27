@@ -9,8 +9,9 @@ function displayComment(event) {
   console.log(commentInput.value);
   console.log(nameInput.value);
   console.log(emailInput.value);
+  let comments = [nameInput.value, emailInput.value, commentInput.value];
   let commentBox = document.querySelector("#paragraph");
-  commentBox.innerHTML = `<div style="font-size:20px">${nameInput.value} <br /> ${emailInput.value} <br /> ${commentInput.value} </div>`;
+  commentBox.innerHTML = `<div style="font-size:20px; background:#C8C8DF; text-align: left; padding:15px; border-radius: 10px; width: 40%; margin:5px; border: 1px solid grey;">Name: ${comments[0]} <br />Email: ${comments[1]} <br /> Comment: ${comments[2]} </div>`;
   form.reset();
 }
 
