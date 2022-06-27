@@ -20,9 +20,10 @@ function countCharacters() {
   let commentInput = document.querySelector("#comment");
   let characterLength = commentInput.value.length;
   if (characterLength > maxLength) {
-    commentInput.style.border = "3px solid red";
+    commentInput.style.border = "1px solid red";
     characters.innerHTML = `<span style="color:red">${characterLength}</span>/140`;
   } else {
     characters.innerHTML = `${characterLength}/140`;
+    commentInput.style.border = "1px solid grey";
   }
 }

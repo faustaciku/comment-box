@@ -8,18 +8,24 @@
     <title>Comment Box</title>
   </head>
   <body>
-    <form id="comment-form">
-      <input type="text" placeholder="Enter your name..." id="name" />
-      <input type="email" placeholder="Enter your email..." id="email" />
-      <input
-        type="text"
-        placeholder="Enter a comment..."
-        id="comment"
-        onkeyup="countCharacters()"
-      />
-      <span id="characters">0/140</span>
-      <input type="submit" value="Post Comment" />
-    </form>
+    <div class="comment-space">
+      <h1>Leave a comment</h1>
+      <form id="comment-form">
+        <input type="text" placeholder="Enter your name..." id="name" />
+        <input type="email" placeholder="Enter your email..." id="email" />
+        <textarea
+          name="comment"
+          id="comment"
+          cols="30"
+          rows="10"
+          placeholder="Enter a comment..."
+          onkeyup="countCharacters()"
+        ></textarea>
+
+        <div id="characters">0/140</div>
+        <input type="submit" value="Post Comment" id="submit" />
+      </form>
+    </div>
     <p></p>
     <script src="index.js"></script>
   </body>
