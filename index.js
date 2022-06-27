@@ -15,8 +15,14 @@ function displayComment(event) {
 }
 
 function countCharacters() {
+  let maxLength = 140;
+  let characters = document.querySelector("#characters");
   let commentInput = document.querySelector("#comment");
   let characterLength = commentInput.value.length;
-  let characters = document.querySelector("#characters");
-  characters.innerHTML = `${characterLength}/140`;
+  if (characterLength > maxLength) {
+    commentInput.style.border = "3px solid red";
+    characters.innerHTML = `<span style="color:red">${characterLength}</span>/140`;
+  } else {
+    characters.innerHTML = `${characterLength}/140`;
+  }
 }
