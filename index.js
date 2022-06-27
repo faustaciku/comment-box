@@ -21,6 +21,15 @@ function displayComment(event) {
   form.reset();
 }
 
+function renderComments() {
+  let commentBox = document.querySelector("#paragraph");
+  let temp = "";
+  comments.forEach((comment) => {
+    temp += `<div style="font-size:20px; background:#C8C8DF; text-align: left; padding:15px; border-radius: 10px; width: 40%; margin:5px; border: 1px solid grey;">Name: ${comment.name} <br />Email: ${comment.email} <br /> Comment: ${comment.comment} </div>`;
+  });
+  commentBox.innerHTML = temp;
+}
+
 function countCharacters() {
   let maxLength = 140;
   let characters = document.querySelector("#characters");
